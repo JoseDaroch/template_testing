@@ -1,4 +1,10 @@
 class PagesController < ApplicationController
-  def index
+  def song
+  end
+
+  def artist
+  end
+
+  def album
   end
 end
