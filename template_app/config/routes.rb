@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
 
-
-  get '/signup', to:'user#new'
-
-  get '/song', to: 'pages#song'
-  get '/artist', to: 'pages#artist'
-  get '/album', to: 'pages#album'
+  resources :users
+  
+  get '/signup', to:'users#new'
 
   root "pages#index"
 

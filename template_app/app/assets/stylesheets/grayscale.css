@@ -21,13 +21,20 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5 {
     margin: 0 0 35px;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
+}
+
+h6 {
+  font-size: 15px;
+  margin: 0 0 35px;
+  text-transform: uppercase;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  letter-spacing: 2px;
 }
 
 p {
@@ -370,4 +377,19 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 3px solid #bbb;
+  width: 50%;
+  padding: 10px 10px;
+  margin-bottom: 20px;
+  color: #000;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
 }

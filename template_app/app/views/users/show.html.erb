@@ -1,0 +1,18 @@
+<% provide(:title, "User") %>
+
+
+<!-- Intro Header -->
+<header class="intro">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                  <h2> Your account information: </h2>
+                  <p> <%= gravatar_for @user %></p>
+                  <p class="intro-text">Username: <%= @user.name %><br></p>
+                  <p class="intro-text">Email: <%= @user.email %><br></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
