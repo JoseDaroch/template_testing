@@ -10,48 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171004065053) do
+ActiveRecord::Schema.define(version: 20171004185004) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "artists", force: :cascade do |t|
-    t.string   "nombre"
-    t.string   "descripcion"
-    t.string   "genero"
-    t.string   "lugar_origen"
-    t.date     "periodo_inicio"
-    t.date     "periodo_fin"
-    t.string   "integrantes"
-    t.integer  "user_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-    t.index ["user_id", "created_at"], name: "index_artists_on_user_id_and_created_at", using: :btree
-    t.index ["user_id"], name: "index_artists_on_user_id", using: :btree
-  end
-
-  create_table "songs", force: :cascade do |t|
-    t.string   "nombre"
-    t.string   "genero"
-    t.time     "duracion"
-    t.integer  "user_id"
-    t.integer  "artist_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["artist_id"], name: "index_songs_on_artist_id", using: :btree
-    t.index ["user_id"], name: "index_songs_on_user_id", using: :btree
-  end
-
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
     t.string   "password_digest"
+    t.boolean  "admin",           default: false
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
 
-  add_foreign_key "artists", "users"
-  add_foreign_key "songs", "artists"
-  add_foreign_key "songs", "users"
 end

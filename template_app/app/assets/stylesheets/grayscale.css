@@ -393,3 +393,13 @@ input, textarea, select, .uneditable-input {
 input {
   height: auto !important;
 }
+
+/* gravatar */
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+.gravatar_edit {
+  margin-top: 15px
+}
