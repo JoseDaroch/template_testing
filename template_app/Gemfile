@@ -7,11 +7,13 @@ end
 
 ruby '2.4.0'
 
+gem 'less-rails', git: 'https://github.com/Genkilabs/less-rails' #fix for deprecated Sprockets ImportProcessor
+gem 'less-rails-bootstrap'
+
 gem 'bcrypt', '3.1.11'
 
 gem 'therubyracer'
 
-gem 'less-rails-bootstrap'
 
 gem "font-awesome-rails"
 

@@ -1,3 +1,13 @@
+GIT
+  remote: https://github.com/Genkilabs/less-rails
+  revision: 7407431b8ae527b0d941c1919c5567c0e59130ea
+  specs:
+    less-rails (2.8.0.pre.rails5)
+      actionpack (>= 4.0)
+      less (~> 2.6.0)
+      sprockets (> 2, < 4)
+      tilt
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -72,11 +82,6 @@ GEM
       thor (>= 0.14, < 2.0)
     less (2.6.0)
       commonjs (~> 0.2.7)
-    less-rails (2.8.0)
-      actionpack (>= 4.0)
-      less (~> 2.6.0)
-      sprockets (> 2, < 4)
-      tilt
     less-rails-bootstrap (3.3.5.0)
       less-rails (>= 2.6, <= 2.8)
     libv8 (3.16.14.19)
@@ -187,6 +192,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-easing-rails
   jquery-rails
+  less-rails!
   less-rails-bootstrap
   listen (~> 3.0.5)
   pg (~> 0.18)
