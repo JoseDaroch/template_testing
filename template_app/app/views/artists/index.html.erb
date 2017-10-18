@@ -1,0 +1,29 @@
+<% provide(:title, "All artists") %>
+
+
+<!-- Intro Header -->
+<header class="intro">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                  <h2> All artists </h2>
+                  <% @artist.each do |artist| %>
+                  <li>
+                    <p class="intro-text"><%= link_to artist.name, user %><br></p>
+                    <p class="intro-text">
+                        | <%= link_to "show", user, method: :show %>
+                      <% if current_user.admin? && !current_user?(user) %>
+                        | <%= link_to "create", user, method: :new %>
+                        | <%= link_to "edit", user, method: :edit %>
+                        | <%= link_to "delete", user, method: :delete, data: { confirm: "You sure?" } %>
+
+                      <% end %>
+                    <br></p>
+                  </li>
+                  <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
