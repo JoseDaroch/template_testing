@@ -1,0 +1,21 @@
+<% provide(:title, "All users") %>
+
+
+<!-- Intro Header -->
+<header class="intro">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                  <h2> All users </h2>
+                  <% @users.each do |user| %>
+                  <li>
+                    <p class="intro-text"><%= gravatar_for user, size:50 %><br></p>
+                    <p class="intro-text"><%= link_to user.name, user %><br></p>
+                  </li>
+                  <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
