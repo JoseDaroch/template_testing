@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  descripcion: MyText
+  lugar_origen: MyString
+  genero: MyString
+  periodo_inicio: 2017-10-18
+  periodo_fin: 2017-10-18
+
+two:
+  nombre: MyString
+  descripcion: MyText
+  lugar_origen: MyString
+  genero: MyString
+  periodo_inicio: 2017-10-18
+  periodo_fin: 2017-10-18

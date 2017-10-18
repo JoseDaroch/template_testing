@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  genero: MyString
+  lanzamiento: 2017-10-18
+  numero_canciones: 
+  artist: one
+
+two:
+  nombre: MyString
+  genero: MyString
+  lanzamiento: 2017-10-18
+  numero_canciones: 
+  artist: two
