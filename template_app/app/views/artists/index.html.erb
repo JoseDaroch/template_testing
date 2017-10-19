@@ -6,23 +6,41 @@
     <div class="intro-body">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                  <h2> All artists </h2>
-                  <% @artist.each do |artist| %>
-                  <li>
-                    <p class="intro-text"><%= link_to artist.name, user %><br></p>
-                    <p class="intro-text">
-                        | <%= link_to "show", user, method: :show %>
-                      <% if current_user.admin? && !current_user?(user) %>
-                        | <%= link_to "create", user, method: :new %>
-                        | <%= link_to "edit", user, method: :edit %>
-                        | <%= link_to "delete", user, method: :delete, data: { confirm: "You sure?" } %>
-
-                      <% end %>
-                    <br></p>
-                  </li>
-                  <% end %>
-                </div>
+                  <h2> All artists </h2><br><br>
+                  <h6>
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Nombre</th>
+                          <th>Lugar origen</th>
+                          <th>Descripcion</th>
+                          <th>Genero</th>
+                          <th>Periodo inicio</th>
+                          <th>Periodo fin</th>
+                          <th colspan="3"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <% @artists.each do |artist| %>
+                          <tr>
+                            <td><%= artist.nombre %></td>
+                            <td><%= artist.lugar_origen %></td>
+                            <td><%= artist.descripcion %></td>
+                            <td><%= artist.genero %></td>
+                            <td><%= artist.periodo_inicio %></td>
+                            <td><%= artist.periodo_fin %></td>
+                            <td><%= link_to 'Show', artist %></td>
+                            <% if current_user.admin? && !current_user?(user) %>
+                              <td><%= link_to 'Edit', artist, method: :edit %></td>
+                              <td><%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                            <% end %>
+                          </tr>
+                        <% end %>
+                      </tbody>
+                    </table>
+                    <br>
+                    <%= link_to 'New Artist', new_artist_path, class: "btn btn-default btn-lg" %>
+                  </h6>
             </div>
         </div>
     </div>

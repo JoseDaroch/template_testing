@@ -1,0 +1,30 @@
+<% provide(:title, "Sign Up") %>
+
+<header class="intro">
+  <div class="intro-body">
+      <div class="container">
+          <div class="row">
+                <h2> Sign Up </h2><br><br>
+                  <h6>
+                    <%= form_for(@user) do |f| %>
+                      <%= render 'shared/error_messages' %>
+
+                      <%= f.label :nombre %><br>
+                      <%= f.text_field :nombre, class: 'form-control'  %><br>
+
+                      <%= f.label :"lugar_origen", "lugar origen"  %><br>
+                      <%= f.lugar_origen_field :lugar_origen, class: 'form-control'  %><br>
+
+                      <%= f.label :descripcion %><br>
+                      <%= f.descripcion_field :descripcion, class: 'form-control'  %><br>
+
+                      <%= f.label :genero  %><br>
+                      <%= f.genero :genero, class: 'form-control'  %><br>
+
+                      <%= f.submit "Create my account", class: "btn btn-default btn-lg" %>
+                    <% end %>
+                  </h6>
+          </div>
+      </div>
+    </div>
+</header>

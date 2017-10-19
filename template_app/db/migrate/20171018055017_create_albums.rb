@@ -4,7 +4,7 @@ class CreateAlbums < ActiveRecord::Migration[5.0]
       t.string :nombre
       t.string :genero
       t.date :lanzamiento
-      t.int :numero_canciones
+      t.string :numero_canciones
       t.references :artist, foreign_key: true
 
       t.timestamps
