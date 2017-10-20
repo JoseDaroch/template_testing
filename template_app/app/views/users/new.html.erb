@@ -22,6 +22,9 @@
                       <%= f.label :password_confirmation, "Confirmation" %><br>
                       <%= f.password_field :password_confirmation, class: 'form-control'  %><br>
 
+                      <%= f.label :admin, "¿Administrator?" %><br>
+                      <%= f.check_box :admin, class: 'form-control'  %><br>
+
                       <%= f.submit "Create my account", class: "btn btn-default btn-lg" %>
                     <% end %>
                   </h6>

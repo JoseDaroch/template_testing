@@ -20,13 +20,22 @@ html {
 h1,
 h2,
 h3,
-h4,
-h5 {
+h4 {
     margin: 0 0 35px;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
+}
+
+h5 {
+  font-size: 20px;
+  margin: 0 0 25px;
+  text-transform: uppercase;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  letter-spacing: 2px;
+  line-height: 1.5;
+
 }
 
 h6 {
@@ -381,10 +390,18 @@ body {
 
 /* forms */
 
-input, textarea, select, .uneditable-input {
-  border: 3px solid #bbb;
+input, textarea, .uneditable-input {
   width: 50%;
   padding: 10px 10px;
+  margin-bottom: 10px;
+  color: #000;
+  @include box_sizing;
+}
+
+input, select, .uneditable-input {
+  float: left:
+  width: 150px;
+  padding: 3px 10px;
   margin-bottom: 20px;
   color: #000;
   @include box_sizing;
@@ -396,7 +413,6 @@ input {
 
 /* gravatar */
 .gravatar {
-  float: left;
   margin-right: 10px;
 }
 
@@ -414,4 +430,12 @@ input {
     padding: 10px 0;
     border-bottom: 1px solid $gray-lighter;
   }
+}
+
+.table th, td {
+   text-align: center;
+}
+
+.table tr {
+   height: 35px;
 }

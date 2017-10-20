@@ -16,6 +16,7 @@ class ArtistsController < ApplicationController
   # GET /artists/new
   def new
     @artist = Artist.new
+    @generos = ['Rock', 'Pop', 'Electronica']
   end
 
   # GET /artists/1/edit
@@ -65,7 +66,7 @@ class ArtistsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def artist_params
-      params.require(:artist).permit(:nombre, :desc, :genero, :lugar, :periodoi, :periodof, :integrantes, :string)
+      params.require(:artist).permit(:nombre, :lugar_origen, :descripcion, :genero, :periodo_inicio)
     end
 
     def admin_user

@@ -1,29 +1,34 @@
-<% provide(:title, "Sign Up") %>
+<% provide(:title, "Create artists") %>
+
 
 <header class="intro">
   <div class="intro-body">
       <div class="container">
           <div class="row">
-                <h2> Sign Up </h2><br><br>
+            <div class="col-md-6 col-md-offset-3 col-lg-5">
+                <h2> Create Artist </h2><br><br>
                   <h6>
-                    <%= form_for(@user) do |f| %>
-                      <%= render 'shared/error_messages' %>
+                    <%= form_for(@artist) do |f| %>
 
                       <%= f.label :nombre %><br>
                       <%= f.text_field :nombre, class: 'form-control'  %><br>
 
                       <%= f.label :"lugar_origen", "lugar origen"  %><br>
-                      <%= f.lugar_origen_field :lugar_origen, class: 'form-control'  %><br>
+                      <%= f.text_field :lugar_origen, class: 'form-control'  %><br>
 
                       <%= f.label :descripcion %><br>
-                      <%= f.descripcion_field :descripcion, class: 'form-control'  %><br>
+                      <%= f.text_field :descripcion, class: "form-control"  %><br>
 
-                      <%= f.label :genero  %><br>
-                      <%= f.genero :genero, class: 'form-control'  %><br>
+                      <%= f.label :genero %><br>
+                      <%= f.select :genero, @generos  %><br>
 
-                      <%= f.submit "Create my account", class: "btn btn-default btn-lg" %>
+                      <%= f.label :"periodo_inicio", "periodo inicio"  %><br>
+                      <%= f.date_select :periodo_inicio, class: 'form-control'  %><br><br>
+
+                      <%= f.submit "Create", class: "btn btn-default btn-lg" %>
                     <% end %>
                   </h6>
+              </div>
           </div>
       </div>
     </div>

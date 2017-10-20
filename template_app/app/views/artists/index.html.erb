@@ -12,25 +12,16 @@
                       <thead>
                         <tr>
                           <th>Nombre</th>
-                          <th>Lugar origen</th>
-                          <th>Descripcion</th>
                           <th>Genero</th>
-                          <th>Periodo inicio</th>
-                          <th>Periodo fin</th>
                           <th colspan="3"></th>
                         </tr>
                       </thead>
                       <tbody>
                         <% @artists.each do |artist| %>
                           <tr>
-                            <td><%= artist.nombre %></td>
-                            <td><%= artist.lugar_origen %></td>
-                            <td><%= artist.descripcion %></td>
+                            <td><%= link_to artist.nombre, artist %></td>
                             <td><%= artist.genero %></td>
-                            <td><%= artist.periodo_inicio %></td>
-                            <td><%= artist.periodo_fin %></td>
-                            <td><%= link_to 'Show', artist %></td>
-                            <% if current_user.admin? && !current_user?(user) %>
+                            <% if current_user.admin?%>
                               <td><%= link_to 'Edit', artist, method: :edit %></td>
                               <td><%= link_to 'Destroy', artist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
                             <% end %>
@@ -39,7 +30,9 @@
                       </tbody>
                     </table>
                     <br>
-                    <%= link_to 'New Artist', new_artist_path, class: "btn btn-default btn-lg" %>
+                    <% if current_user.admin? %>
+                      <%= link_to 'New Artist', new_artist_path, class: "btn btn-default btn-lg" %>
+                    <% end %>
                   </h6>
             </div>
         </div>

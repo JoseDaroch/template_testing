@@ -2,16 +2,14 @@
 
 one:
   nombre: MyString
-  descripcion: MyText
   lugar_origen: MyString
+  descripcion: MyText
   genero: MyString
-  periodo_inicio: 2017-10-19
-  periodo_fin: 2017-10-19
+  periodo_inicio: 2017-10-20
 
 two:
   nombre: MyString
-  descripcion: MyText
   lugar_origen: MyString
+  descripcion: MyText
   genero: MyString
-  periodo_inicio: 2017-10-19
-  periodo_fin: 2017-10-19
+  periodo_inicio: 2017-10-20
