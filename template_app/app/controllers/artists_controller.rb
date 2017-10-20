@@ -11,6 +11,8 @@ class ArtistsController < ApplicationController
   # GET /artists/1
   # GET /artists/1.json
   def show
+    @artist = User.find(params[:id])
+    @albums = @artist.albums
   end
 
   # GET /artists/new

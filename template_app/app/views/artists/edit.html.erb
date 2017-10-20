@@ -1,0 +1,35 @@
+<% provide(:title, "Edit artist") %>
+
+
+<header class="intro">
+  <div class="intro-body">
+      <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3 col-lg-5">
+                <h2> Editting Artist </h2><br><br>
+                  <h6>
+                    <%= form_for(@artist) do |f| %>
+
+                      <%= f.label :nombre %><br>
+                      <%= f.text_field :nombre, class: 'form-control'  %><br>
+
+                      <%= f.label :"lugar_origen", "lugar origen"  %><br>
+                      <%= f.text_field :lugar_origen, class: 'form-control'  %><br>
+
+                      <%= f.label :descripcion %><br>
+                      <%= f.text_field :descripcion, class: "form-control"  %><br>
+
+                      <%= f.label :genero %><br>
+                      <%= f.select :genero, @generos  %><br>
+
+                      <%= f.label :"periodo_inicio", "periodo inicio"  %><br>
+                      <%= f.date_select :periodo_inicio, class: 'form-control'  %><br><br>
+
+                      <%= f.submit "Update", class: "btn btn-default btn-lg" %>
+                    <% end %>
+                  </h6>
+              </div>
+          </div>
+      </div>
+    </div>
+</header>
