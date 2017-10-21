@@ -1,0 +1,32 @@
+<% provide(:title, "Create songs") %>
+
+
+<header class="intro">
+  <div class="intro-body">
+      <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3 col-lg-5">
+                <h2> Create Song </h2><br><br>
+                  <h6>
+                    <%= form_for(@song) do |f| %>
+
+                      <%= f.label :nombre %><br>
+                      <%= f.text_field :nombre, class: 'form-control'  %><br>
+
+                      <%= f.label :genero %><br>
+                      <%= f.select :genero, @generos%><br>
+
+                      <%= f.label :duracion %><br>
+                      <%= f.time_select :duracion, class: 'form-control'  %><br>
+
+                      <%= f.label :album %><br>
+                      <%= f.select :album, @albums %><br><br>
+
+                      <%= f.submit "Create", class: "btn btn-default btn-lg" %>
+                    <% end %>
+                  </h6>
+              </div>
+          </div>
+      </div>
+    </div>
+</header>
